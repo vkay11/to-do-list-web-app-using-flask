@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4 class="mt-3 ms-3">Add your Task here:</h4>
+<form action="{{ url_for('add') }}" method="post" class="mt-3 ms-3">
+    {{ form.csrf_token }}
+    {{ form.text }}
+    {{ form.submit }}
+</form>
+{% endblock %}
